@@ -15,6 +15,8 @@ var objectLiteral = {
 //   "age" : 12
 // }
 
+
+//new Coomand
 //umwandlung Object->JSON
 var jsonString = JSON.stringify(objectLiteral);
 console.log(jsonString);
