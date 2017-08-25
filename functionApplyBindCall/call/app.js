@@ -19,6 +19,7 @@ var logName = function(para1, para2){
 // und call() kann direct ausgeführt werden. "para1" und "para2" werden
 // bei call(object, para1, para2) angegeben.
 logName.call(person,"Hi","MyName");
+console.log(person);
 
 //example bind()
 var logNamePerson = logName.bind(person);
