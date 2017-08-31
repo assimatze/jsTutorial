@@ -18,8 +18,8 @@ MyConstructor.prototype.b = "Variable B";
 
 
 var myObject = new MyConstructor();
-// 3 dinge passieren jetzt:
-// 1) es wird ein neues Object mit dem Namen myObject erzeugt.
+// 4 dinge passieren jetzt:
+// 1) es wird ein neues Object mit dem Namen MyConstructor erzeugt.
 
 // 2) die property/eigenschaft [[prototype]] des myObject Object
 // wird auf den derzeiten wert von MyConstructor.prototype gesetzt
@@ -28,4 +28,10 @@ var myObject = new MyConstructor();
 // 3) die Function MyConstructor wird ausgeführt.
 // Anstelle des "this" wird nun der name des Object also myObject genutzt.
 // aus "this.a" wird "myObject.a".
-console.log(myObject.b);
+// 4) das erstellte Objekt wird nun zurück gegeben! zuweisung myObject zeigt
+// jetzt auf das erstellte Object.
+
+MyConstructor.prototype.b = " Updated Variable B";
+
+console.log((myObject instanceof MyConstructor));
+console.log((myObject));
