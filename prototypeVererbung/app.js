@@ -19,3 +19,29 @@ child.get = function fn2(){
 	return parent.get.call(child) * 2;
 }
 console.log(child.get());
+
+console.log("---------------------------------------");
+
+var Answer = function(val){
+	this.val = val;
+};
+
+Answer.prototype.get = function(){
+	return this.val;
+};
+
+var answer = new Answer(42);
+console.log(answer.get());
+
+var FirmAnswer = function(val){
+	Answer.call(this, val);
+}
+
+FirmAnswer.prototype = Object.create(Answer.prototype);
+FirmAnswer.prototype.constructor = FirmAnswer;
+FirmAnswer.prototype.get = function fn2(){
+	return Answer.prototype.get.call(this) +"!!";
+}
+
+var luckyAnswer = new FirmAnswer(3.12);
+console.log(luckyAnswer.get());
