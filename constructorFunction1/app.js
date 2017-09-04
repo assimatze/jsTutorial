@@ -21,7 +21,7 @@ var myObject = new MyConstructor();
 // 4 dinge passieren jetzt:
 // 1) es wird ein neues Object mit dem Namen MyConstructor erzeugt.
 
-// 2) die property/eigenschaft [[prototype]] des myObject Object
+// 2) die  [[prototype]] property/eigenschaft des myObject Object
 // wird auf den derzeiten wert von MyConstructor.prototype gesetzt
 // [[prototype]] ist ein nicht manipulierbarer Property von myObject.
 
