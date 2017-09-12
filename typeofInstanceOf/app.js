@@ -24,13 +24,13 @@ console.log(Array.isArray(arr)); //true
 console.log(Object.prototype.toString.call(arr)); //[object Array]]
 
 var obj = {};
-console.log(typeof obj);
+console.log(typeof obj); //object
 
 function Person(name){
   this.name = name;
 }
 // typeof liefert auch bei constructor Objekten nur den allgemeinen Objekt typeo
-// Zurück. will man nun aber genau wissen um welche art von array es sich
+// Zurück. will man nun aber genau wissen um welche art von object es sich
 // handelt benutzt man instanceof operator.
 var person = new Person("Max");
 console.log(typeof person); //objekt
@@ -45,11 +45,11 @@ console.log(person instanceof Object)
 var Mann = function(){};
 Mann.prototype = Object.create(Person.prototype);
 var max = new Mann("max");
-console.log(max instanceof Mann);
+console.log(max instanceof Mann); //true
 //max ist aber auch eine Person
-console.log(max instanceof Person);
+console.log(max instanceof Person);//true
 // und max ist auch ein Object
-console.log(max instanceof Object);
+console.log(max instanceof Object);//true
 console.log("---------------------------");
 
 function MyConstructor (){
